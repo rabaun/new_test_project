@@ -162,9 +162,9 @@ class _MyHomePageState extends State<MyHomePage> {
               child: GridView.builder(
                 shrinkWrap: true,
                 itemCount: list?.length,
-                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: width*0.7,
-                  mainAxisExtent: width*0.3,// Максимальная ширина контейнера
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisExtent: width * 0.3,
+                  crossAxisCount: crossAxisCount,
                 ),
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
